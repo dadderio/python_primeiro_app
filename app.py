@@ -5,6 +5,7 @@ restaurantes = [{'nome':'Praça', 'categoria':'japonesa', 'ativo':False},
                 {'nome':'HotMeat', 'categoria':'fast food', 'ativo':False}]
 
 def exibir_nome_do_programa():
+    '''Exibirá o nome do programa na tela'''
     print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -15,13 +16,16 @@ def exibir_nome_do_programa():
 """)
 
 def finalizar_app():
+    '''Exibe a mensagem de finalizando aplicativo'''
     exibir_subtitulo('Finalizando app...')
 
 def voltar_ao_menu_principal():
+    '''Solicita uma tecla para voltar ao menu'''
     input('\n Digite uma tecla para voltar ao menu principal ')
     main()
 
 def opcao_invalida():
+    '''Exibe mensagem de Opção inválida e retornar ao menu principal'''
     print('Opção inválida! \n')
     voltar_ao_menu_principal()
 
@@ -40,6 +44,17 @@ def exibir_opcoes():
     print('4. Sair \n')
   
 def cadastrar_novo_restaurante():
+    '''(DocStrings) Essa função é responsável por cadastrar um novo restaurante
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um restaurante na lista de restaurantes
+
+    '''
+
     exibir_subtitulo('Cadastro de novos restaurantes:')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria = input(f'Digite o nome da categoria do restaurante {nome_do_restaurante}: ')
